@@ -143,33 +143,10 @@
             display: block;
         }
 
-        /* Container Logo Gambar */
-        .logo-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin: 15px 0;
-            padding: 12px;
-            background-color: rgba(255, 255, 255, 0.03);
-            border-radius: 6px;
-            border: 1px dashed rgba(255, 255, 255, 0.1);
-            align-items: center;
-        }
-
-        .logo-img {
-            height: 30px;
-            object-fit: contain;
-            filter: grayscale(20%) brightness(110%);
-            transition: filter 0.2s;
-        }
-
-        .logo-img:hover {
-            filter: grayscale(0%) brightness(120%);
-        }
-
         .project-list {
             list-style-type: none;
             margin-top: 10px;
+            margin-bottom: 20px;
         }
 
         .project-list li {
@@ -188,11 +165,44 @@
         }
 
         .sub-section-title {
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: var(--text-main);
-            margin-top: 15px;
-            margin-bottom: 5px;
+            margin-top: 20px;
+            margin-bottom: 12px;
             font-weight: 600;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+            padding-bottom: 5px;
+        }
+
+        /* KLASIFIKASI STYLE GALERI FOTO MAS RICO */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .photo-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 4px;
+            background-color: #0b0f19;
+            margin-bottom: 8px;
+        }
+
+        .photo-caption {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
         }
 
         footer {
@@ -208,7 +218,7 @@
             body { padding: 20px 10px; }
             header h1 { font-size: 2rem; }
             .card-header { flex-direction: column; align-items: flex-start; }
-            .logo-img { height: 25px; }
+            .photo-gallery { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -236,13 +246,6 @@
                         <span class="project-tag">Mining Network Infrastructure</span>
                     </div>
 
-                    <div class="logo-container">
-                        <img class="logo-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cisco_logo.svg/2560px-Cisco_logo.svg.png" alt="Cisco" title="Cisco">
-                        <img class="logo-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Fortinet_logo.svg/2560px-Fortinet_logo.svg.png" alt="Fortinet" title="Fortinet">
-                        <img class="logo-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Ubiquiti_Networks_logo.svg/2560px-Ubiquiti_Networks_logo.svg.png" alt="Ubiquiti UniFi / AirFiber" title="Ubiquiti UniFi & AirFiber">
-                        <img class="logo-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Motorola_Solutions_logo.svg/2560px-Motorola_Solutions_logo.svg.png" alt="Motorola" title="Motorola">
-                    </div>
-
                     <ul class="project-list">
                         <li>Standardisasi regulasi komunikasi digital untuk unlicensed wireless radio links di seluruh site KPP.</li>
                         <li>Standardisasi kebijakan network firewall pada perangkat Fortinet di seluruh site.</li>
@@ -252,6 +255,18 @@
                         <li>Manage Cisco Layer 2 dan 3 di Head Office beserta seluruh site KPP.</li>
                         <li>Manage Access Point UniFi dan Radio Wireless Ubiquiti di seluruh site KPP.</li>
                     </ul>
+
+                    <div class="sub-section-title">Dokumentasi Perangkat & Infrastruktur Lapangan:</div>
+                    <div class="photo-gallery">
+                        <div class="photo-card">
+                            <img src="kpp-cisco.jpg" alt="Konfigurasi Perangkat Cisco/Fortinet">
+                            <div class="photo-caption">Manage Cisco L2/L3 & Fortinet Firewall</div>
+                        </div>
+                        <div class="photo-card">
+                            <img src="kpp-wireless.jpg" alt="Instalasi Wireless Ubiquiti / UniFi">
+                            <div class="photo-caption">Akses Point UniFi & Ubiquiti AirFiber</div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="portfolio-card">
@@ -262,10 +277,6 @@
                             <div class="role-title">IoT Engineer</div>
                         </div>
                         <span class="project-tag">NOC & IoT Delivery Service</span>
-                    </div>
-
-                    <div class="logo-container">
-                        <img class="logo-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Telkom_Indonesia_2013.svg/2560px-Telkom_Indonesia_2013.svg.png" alt="Telkom Indonesia" title="Telkom Indonesia">
                     </div>
 
                     <ul class="project-list">
@@ -282,6 +293,18 @@
                         <li><strong>PDAM Automation & Telemetri:</strong> Pengawalan instalasi perangkat sensor digital bersama mitra PDAM serta pengelolaan analisis data lapangan.</li>
                         <li><strong>Power Monitoring & Antares Cam:</strong> Instalasi dan analisis data sistem Power Monitoring (PT Dunia Kimia Jaya / AICA) serta pengawalan cloud service platform CCTV Antares Cam.</li>
                     </ul>
+
+                    <div class="sub-section-title">Dokumentasi Proyek Lapangan (Sesuai Portfolio):</div>
+                    <div class="photo-gallery">
+                        <div class="photo-card">
+                            <img src="telkom-lora.jpg" alt="Instalasi & Troubleshooting LoRaWAN">
+                            <div class="photo-caption">Managed Service LoRaWAN & Smart Water Level</div>
+                        </div>
+                        <div class="photo-card">
+                            <img src="telkom-pdam.jpg" alt="Proyek Telemetri Automation PDAM">
+                            <div class="photo-caption">PDAM Automation & Container Tracking</div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="portfolio-card">
@@ -294,15 +317,19 @@
                         <span class="project-tag">Cellular Network Optimization</span>
                     </div>
 
-                    <div class="logo-container">
-                        <img class="logo-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Smartfren_logo.svg/2560px-Smartfren_logo.svg.png" alt="Smartfren" title="Smartfren Telecom">
-                    </div>
-
                     <ul class="project-list">
                         <li>Bertanggung jawab penuh dalam menjaga nilai Key Performance Indicator (KPI) jaringan seluler pada site binaan agar tetap optimal memenuhi target perusahaan.</li>
                         <li>Melakukan pengawasan ketat serta pemeliharaan teknis rutin pada perangkat aktif EnodeB dan link Microwave penyalur data.</li>
                         <li>Melakukan langkah RF Optimasi jaringan selular secara menyeluruh serta melakukan pengujian lapangan lewat Drive Test (Kategori analisis Before & After Optimization).</li>
                     </ul>
+
+                    <div class="sub-section-title">Dokumentasi Pemeliharaan Site & Optimasi:</div>
+                    <div class="photo-gallery">
+                        <div class="photo-card">
+                            <img src="smartfren-site.jpg" alt="Maintenance EnodeB & Drive Test">
+                            <div class="photo-caption">EnodeB/Microwave Maintenance & Drive Test</div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
