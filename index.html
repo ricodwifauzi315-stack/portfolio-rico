@@ -112,10 +112,17 @@
             gap: 10px;
         }
 
-        .role-title {
-            font-size: 1.2rem;
+        .company-name {
+            font-size: 1.3rem;
             color: var(--text-main);
+            font-weight: 700;
+        }
+
+        .role-title {
+            font-size: 1.1rem;
+            color: var(--accent-blue);
             font-weight: 600;
+            margin-top: 2px;
         }
 
         .project-tag {
@@ -138,6 +145,7 @@
 
         .project-list {
             list-style-type: none;
+            margin-top: 10px;
         }
 
         .project-list li {
@@ -153,6 +161,16 @@
             position: absolute;
             left: 0;
             color: var(--accent-blue);
+        }
+
+        .sub-section-title {
+            font-size: 1rem;
+            color: var(--text-main);
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: 600;
+            text-decoration: underline;
+            text-underline-offset: 4px;
         }
 
         footer {
@@ -181,72 +199,68 @@
         </header>
 
         <main class="portfolio-section">
-            <h2 class="section-title">Portfolio & Project History</h2>
+            <h2 class="section-title">Portfolio & Kerja Berdasarkan Perusahaan</h2>
             
             <div class="timeline">
 
                 <div class="portfolio-card">
-                    <span class="time-badge">2023 - 2025+</span>
+                    <span class="time-badge">September 2025 - Maret 2026</span>
                     <div class="card-header">
-                        <div class="role-title">Field Operation Engineer</div>
-                        <span class="project-tag">LoRaWAN & IoT Infrastructure</span>
+                        <div>
+                            <div class="company-name">Kalimantan Prima Persada</div>
+                            <div class="role-title">Wire Engineer</div>
+                        </div>
+                        <span class="project-tag">Mining Network Infrastructure</span>
                     </div>
                     <ul class="project-list">
-                        <li>Konfigurasi Gateway LoRa dan optimasi RF jaringan LoRa.</li>
-                        <li>Managed service untuk device dan Platform IoT secara menyeluruh.</li>
-                        <li>Pengawalan instalasi perangkat langsung terhadap mitra di lapangan.</li>
-                        <li>Melakukan pembuatan Report Harian untuk pelanggan guna memastikan semua perangkat berstatus Normal.</li>
+                        <li>Standardisasi regulasi komunikasi digital untuk unlicensed wireless radio links di seluruh site KPP.</li>
+                        <li>Standardisasi kebijakan network firewall pada perangkat Fortinet di seluruh site.</li>
+                        <li>Implementasi pembatasan STV dan UDP port pada Fortinet serta mendedikasikan firewall policy khusus untuk kontrol akses.</li>
+                        <li>Implementasi Jaringan Rajant Kinetic Mesh.</li>
+                        <li>Implementasi Radio Komunikasi HT dan RIG.</li>
+                        <li>Manage Cisco Layer 2 dan 3 di Head Office beserta seluruh site KPP.</li>
+                        <li>Manage Access Point UniFi dan Radio Wireless Ubiquiti di seluruh site KPP.</li>
                     </ul>
                 </div>
 
                 <div class="portfolio-card">
-                    <span class="time-badge">2023 - 2025+</span>
+                    <span class="time-badge">Januari 2023 - April 2025</span>
                     <div class="card-header">
-                        <div class="role-title">Field Operation Engineer</div>
-                        <span class="project-tag">Smart Water Level System</span>
+                        <div>
+                            <div class="company-name">Telkom Indonesia</div>
+                            <div class="role-title">IoT Engineer</div>
+                        </div>
+                        <span class="project-tag">NOC & IoT Delivery Service</span>
                     </div>
                     <ul class="project-list">
-                        <li>Managed service untuk device dan Platform Smart Water Level Management.</li>
-                        <li>Melakukan pengawalan proses instalasi teknis bersama tim mitra kerja.</li>
-                        <li>Menyusun Laporan Harian performa sistem untuk pelanggan dan menjaga status perangkat tetap termonitor normal.</li>
+                        <li>Bertugas aktif sebagai bagian dari tim Network Operation Center (NOC).</li>
+                        <li>Menangani Service Delivered proyek-proyek IoT berskala besar di industri Manufaktur.</li>
+                        <li>Melakukan site survey, instalasi fisik, troubleshooting, dan managed services untuk jaringan LoRaWAN serta perangkat end-device IoT.</li>
                     </ul>
-                </div>
 
-                <div class="portfolio-card">
-                    <span class="time-badge">2023 - 2025+</span>
-                    <div class="card-header">
-                        <div class="role-title">Field Operation Engineer</div>
-                        <span class="project-tag">Container Tracking Project</span>
-                    </div>
+                    <div class="sub-section-title">Riwayat Proyek Lapangan (Field Operations):</div>
                     <ul class="project-list">
-                        <li>Pengawalan khusus pada Project Delivery Tracking Container logistik.</li>
-                        <li>Melakukan analisis mendalam terhadap data tracking pergerakan container secara real-time.</li>
-                        <li>Membuat reporting berkala kepada klien demi menjamin kestabilan update status pengiriman.</li>
-                    </ul>
-                </div>
-
-                <div class="portfolio-card">
-                    <span class="time-badge">2023 - 2025+</span>
-                    <div class="card-header">
-                        <div class="role-title">Field Operation Engineer</div>
-                        <span class="project-tag">PDAM Automation</span>
-                    </div>
-                    <ul class="project-list">
-                        <li>Pengawalan penuh proses instalasi infrastruktur telemetri digital bersama mitra PDAM.</li>
-                        <li>Melakukan analisis data distribusi air dan monitoring sensor lapangan.</li>
+                        <li><strong>Project LoRa & IoT:</strong> Konfigurasi Gateway LoRa, optimasi cakupan RF, managed service device/platform IoT, serta pengawalan instalasi mitra disertai pembuatan Laporan Harian status perangkat.</li>
+                        <li><strong>Smart Water Level System:</strong> Managed service device & platform monitoring air, pendampingan instalasi mitra, serta pelaporan performa rutin (perangkat dipastikan Normal).</li>
+                        <li><strong>Container Tracking Project:</strong> Pengawalan pengiriman unit tracker, analisis data koordinat tracking kontainer secara real-time, dan reporting harian berkala untuk pelanggan.</li>
+                        <li><strong>PDAM Automation & Telemetri:</strong> Pengawalan instalasi perangkat sensor digital bersama mitra PDAM serta pengelolaan analisis data lapangan.</li>
+                        <li><strong>Power Monitoring & Antares Cam:</strong> Instalasi dan analisis data sistem Power Monitoring (PT Dunia Kimia Jaya / AICA) serta pengawalan cloud service platform CCTV Antares Cam.</li>
                     </ul>
                 </div>
 
                 <div class="portfolio-card">
                     <span class="time-badge">2021 - 2023</span>
                     <div class="card-header">
-                        <div class="role-title">Field Operation Engineer</div>
+                        <div>
+                            <div class="company-name">PT Smartfren Telecom Tbk</div>
+                            <div class="role-title">Field Operation Engineer</div>
+                        </div>
                         <span class="project-tag">Cellular Network Optimization</span>
                     </div>
                     <ul class="project-list">
-                        <li>Menjaga nilai Key Performance Indicator (KPI) jaringan seluler pada site agar tetap optimal sesuai target perusahaan.</li>
-                        <li>Melakukan pengawasan dan maintenance rutin pada perangkat keras EnodeB serta link Microwave.</li>
-                        <li>Melakukan RF optimasi jaringan seluler beserta pengujian Drive Test (kategori Before & After Optimization).</li>
+                        <li>Bertanggung jawab penuh dalam menjaga nilai Key Performance Indicator (KPI) jaringan seluler pada site binaan agar tetap optimal memenuhi target perusahaan.</li>
+                        <li>Melakukan pengawasan ketat serta pemeliharaan teknis rutin pada perangkat aktif EnodeB dan link Microwave penyalur data.</li>
+                        <li>Melakukan langkah RF Optimasi jaringan selular secara menyeluruh serta melakukan pengujian lapangan lewat Drive Test (Kategori analisis Before & After Optimization).</li>
                     </ul>
                 </div>
 
