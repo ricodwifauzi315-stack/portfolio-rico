@@ -106,10 +106,32 @@
         .card-header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: center;
             flex-wrap: wrap;
             margin-bottom: 15px;
-            gap: 10px;
+            gap: 15px;
+        }
+
+        .company-info-block {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* STYLE LOGO UTAMA PERUSAHAAN */
+        .company-main-logo {
+            height: 45px;
+            width: auto;
+            max-width: 130px;
+            object-fit: contain;
+            background-color: transparent;
+            border-radius: 4px;
+        }
+
+        /* Khusus logo KPP & Telkom dikasih background putih transparan/sedikit padding agar kontras di dark mode */
+        .company-main-logo.bg-light {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 4px 8px;
         }
 
         .company-name {
@@ -186,6 +208,8 @@
             body { padding: 20px 10px; }
             header h1 { font-size: 2rem; }
             .card-header { flex-direction: column; align-items: flex-start; }
+            .company-info-block { flex-direction: row; align-items: center; }
+            .company-main-logo { height: 35px; }
         }
     </style>
 </head>
@@ -204,11 +228,14 @@
             <div class="timeline">
 
                 <div class="portfolio-card">
-                    <span class="time-badge">September 2025 - Now </span>
+                    <span class="time-badge">September 2025 - Now</span>
                     <div class="card-header">
-                        <div>
-                            <div class="company-name">Kalimantan Prima Persada</div>
-                            <div class="role-title">Wire Engineer</div>
+                        <div class="company-info-block">
+                            <img class="company-main-logo bg-light" src="https://kppmining.com/assets/img/logo.png" alt="Logo KPP Mining">
+                            <div>
+                                <div class="company-name">Kalimantan Prima Persada</div>
+                                <div class="role-title">Wire Engineer</div>
+                            </div>
                         </div>
                         <span class="project-tag">Mining Network Infrastructure</span>
                     </div>
@@ -227,9 +254,12 @@
                 <div class="portfolio-card">
                     <span class="time-badge">Januari 2023 - April 2025</span>
                     <div class="card-header">
-                        <div>
-                            <div class="company-name">Telkom Indonesia</div>
-                            <div class="role-title">IoT Engineer</div>
+                        <div class="company-info-block">
+                            <img class="company-main-logo bg-light" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Telkom_Indonesia_2013.svg/2560px-Telkom_Indonesia_2013.svg.png" alt="Logo Telkom Indonesia">
+                            <div>
+                                <div class="company-name">Telkom Indonesia</div>
+                                <div class="role-title">IoT Engineer</div>
+                            </div>
                         </div>
                         <span class="project-tag">NOC & IoT Delivery Service</span>
                     </div>
@@ -252,9 +282,12 @@
                 <div class="portfolio-card">
                     <span class="time-badge">2021 - 2023</span>
                     <div class="card-header">
-                        <div>
-                            <div class="company-name">PT Smartfren Telecom Tbk</div>
-                            <div class="role-title">Field Operation Engineer</div>
+                        <div class="company-info-block">
+                            <img class="company-main-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Smartfren_logo.svg/2560px-Smartfren_logo.svg.png" alt="Logo Smartfren">
+                            <div>
+                                <div class="company-name">PT Smartfren Telecom Tbk</div>
+                                <div class="role-title">Field Operation Engineer</div>
+                            </div>
                         </div>
                         <span class="project-tag">Cellular Network Optimization</span>
                     </div>
