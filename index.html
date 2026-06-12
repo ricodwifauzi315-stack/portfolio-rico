@@ -204,6 +204,14 @@
         /* 3 COLUMN LAUNCHPAD */
         .stacks-triple-container {
             margin-top: 50px;
+            width: 100%;
+        }
+
+        /* Pembungkus luar grid agar di layar HP sempit bisa di-scroll horizontal tanpa ngerusak layout atas */
+        .grid-scroll-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            padding-bottom: 10px;
         }
 
         .triple-grid {
@@ -211,6 +219,7 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             margin-top: 20px;
+            min-width: 850px; /* Memaksa grid agar tidak gepeng di layar HP sempit */
         }
 
         .column-box {
@@ -289,8 +298,8 @@
             padding-top: 20px;
         }
 
+        /* MEDIA QUERY HP YANG SUDAH DIKALIBRASI (Layout Atas Flexibel, Grid Tetap 3 Kolom) */
         @media (max-width: 900px) {
-            .triple-grid { grid-template-columns: 1fr; gap: 25px; }
             body { padding: 20px 10px; }
             header h1 { font-size: 2rem; }
             .card-header { flex-direction: column; align-items: flex-start; }
@@ -383,116 +392,124 @@
             <div class="stacks-triple-container">
                 <h2 class="section-title">Infrastructures & Enterprise Systems Stacks</h2>
                 
-                <div class="triple-grid">
-                    
-                    <div class="column-box">
-                        <h3>Networking & Security</h3>
-                        <div class="logo-vertical-stack">
-                            <div class="logo-item-box" title="Cisco Systems"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/cisco.svg" alt="Cisco"></div>
-                            <div class="logo-item-box" title="Fortinet / FortiGate"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/fortinet.svg" alt="Fortigate"></div>
-                            
-                            <div class="logo-item-box" title="Microsoft Azure">
-                                <svg viewBox="0 0 260 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M18 38 L30 14 L46 26 L30 46 Z" fill="#0078d4"/>
-                                    <path d="M30 14 L48 14 L65 38 L46 26 Z" fill="#50e6ff"/>
-                                    <path d="M18 38 L42 46 L65 38 L46 26 Z" fill="#1486e0"/>
-                                    <text x="78" y="42" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="26" fill="#f8fafc" letter-spacing="0.5">Microsoft Azure</text>
-                                </svg>
-                            </div>
+                <div class="grid-scroll-wrapper">
+                    <div class="triple-grid">
+                        
+                        <div class="column-box">
+                            <h3>Networking & Security</h3>
+                            <div class="logo-vertical-stack">
+                                <div class="logo-item-box" title="Cisco Systems"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/cisco.svg" alt="Cisco"></div>
+                                <div class="logo-item-box" title="Fortinet / FortiGate"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/fortinet.svg" alt="Fortigate"></div>
+                                
+                                <div class="logo-item-box" title="Microsoft Azure">
+                                    <svg viewBox="0 0 260 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 38 L30 14 L46 26 L30 46 Z" fill="#0078d4"/>
+                                        <path d="M30 14 L48 14 L65 38 L46 26 Z" fill="#50e6ff"/>
+                                        <path d="M18 38 L42 46 L65 38 L46 26 Z" fill="#1486e0"/>
+                                        <text x="78" y="42" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="26" fill="#f8fafc" letter-spacing="0.5">Microsoft Azure</text>
+                                    </svg>
+                                </div>
 
-                            <div class="logo-item-box" title="Ubiquiti UniFi"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/ubiquiti.svg" alt="UniFi"></div>
-                            <div class="logo-item-box" title="Motorola Solutions"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/motorola.svg" alt="Motorola"></div>
-                            
-                            <div class="logo-item-box" title="Teltonika Networks">
-                                <svg viewBox="0 0 320 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                                    <text x="10" y="42" font-family="'Segoe UI', Arial, sans-serif" font-weight="900" font-size="34" fill="#f8fafc" letter-spacing="1">TELTONIKA</text>
-                                    <path d="M290 15 L310 28 L290 41 Z" fill="#38bdf8"/>
-                                </svg>
-                            </div>
-                            
-                            <div class="logo-item-box" title="Ruijie Networks">
-                                <svg viewBox="0 0 240 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                                    <text x="10" y="42" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="36" fill="#f43f5e" letter-spacing="0.5">RuiJie</text>
-                                    <circle cx="165" cy="32" r="10" fill="none" stroke="#38bdf8" stroke-width="4"/>
-                                    <path d="M165 15 L165 22" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
-                                </svg>
+                                <div class="logo-item-box" title="Ubiquiti UniFi"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/ubiquiti.svg" alt="UniFi"></div>
+                                <div class="logo-item-box" title="Motorola Solutions"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/motorola.svg" alt="Motorola"></div>
+                                
+                                <div class="logo-item-box" title="Teltonika Networks">
+                                    <svg viewBox="0 0 320 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                                        <text x="10" y="42" font-family="'Segoe UI', Arial, sans-serif" font-weight="900" font-size="34" fill="#f8fafc" letter-spacing="1">TELTONIKA</text>
+                                        <path d="M290 15 L310 28 L290 41 Z" fill="#38bdf8"/>
+                                    </svg>
+                                </div>
+                                
+                                <div class="logo-item-box" title="Ruijie Networks">
+                                    <svg viewBox="0 0 240 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                                        <text x="10" y="42" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="36" fill="#f43f5e" letter-spacing="0.5">RuiJie</text>
+                                        <circle cx="165" cy="32" r="10" fill="none" stroke="#38bdf8" stroke-width="4"/>
+                                        <path d="M165 15 L165 22" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="column-box">
-                        <h3>Industrial & IoT Solutions</h3>
-                        <div class="logo-vertical-stack">
-                            <div class="logo-item-box" title="Komatsu">
-                                <svg viewBox="0 0 260 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                                    <text x="10" y="44" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="44" fill="#eab308" letter-spacing="-1">KOMATSU</text>
-                                </svg>
-                            </div>
-                            <div class="logo-item-box" title="AICA">
-                                <svg viewBox="0 0 200 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                                    <text x="20" y="44" font-family="'Arial', sans-serif" font-weight="bold" font-size="42" fill="#ef4444" letter-spacing="2">AICA</text>
-                                </svg>
-                            </div>
+                        
+                        <div class="column-box">
+                            <h3>Industrial & IoT Solutions</h3>
+                            <div class="logo-vertical-stack">
+                                <div class="logo-item-box" title="Komatsu">
+                                    <svg viewBox="0 0 260 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                                        <text x="10" y="44" font-family="'Impact', 'Arial Black', sans-serif" font-weight="900" font-size="44" fill="#eab308" letter-spacing="-1">KOMATSU</text>
+                                    </svg>
+                                </div>
+                                <div class="logo-item-box" title="AICA">
+                                    <svg viewBox="0 0 200 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                                        <text x="20" y="44" font-family="'Arial', sans-serif" font-weight="bold" font-size="42" fill="#ef4444" letter-spacing="2">AICA</text>
+                                    </svg>
+                                </div>
 
-                            <div class="logo-item-box" title="PT Dunia Kimia Jaya">
-                                <svg viewBox="0 0 280 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 34 Q18 18 34 16 Q30 30 12 34 Z" fill="#22c55e"/>
-                                    <path d="M14 32 Q26 28 36 38 Q22 38 14 32 Z" fill="#06b6d4"/>
-                                    <text x="46" y="30" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="20" fill="#f8fafc" letter-spacing="0.5">DUNIA KIMIA JAYA</text>
-                                    <text x="47" y="48" font-family="'Segoe UI', Arial, sans-serif" font-weight="500" font-size="12" fill="#94a3b8" letter-spacing="2">EMTEK GROUP PARTNER</text>
-                                </svg>
-                            </div>
+                                <div class="logo-item-box" title="PT Dunia Kimia Jaya">
+                                    <svg viewBox="0 0 280 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 34 Q18 18 34 16 Q30 30 12 34 Z" fill="#22c55e"/>
+                                        <path d="M14 32 Q26 28 36 38 Q22 38 14 32 Z" fill="#06b6d4"/>
+                                        <text x="46" y="30" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="20" fill="#f8fafc" letter-spacing="0.5">DUNIA KIMIA JAYA</text>
+                                        <text x="47" y="48" font-family="'Segoe UI', Arial, sans-serif" font-weight="500" font-size="12" fill="#94a3b8" letter-spacing="2">EMTEK GROUP PARTNER</text>
+                                    </svg>
+                                </div>
 
-                            <div class="logo-item-box" title="LoRaWAN Network">
-                                <svg viewBox="0 0 240 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                                    <text x="10" y="42" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="28" fill="#38bdf8">LoRa</text>
-                                    <text x="85" y="42" font-family="'Segoe UI', sans-serif" font-weight="300" font-size="28" fill="#94a3b8">WAN</text>
-                                    <path d="M190 20 Q205 10 220 20 Q235 30 210 45" fill="none" stroke="#38bdf8" stroke-width="4"/>
-                                </svg>
-                            </div>
-                            <div class="logo-item-box" title="Tanto Inti Line">
-                                <svg viewBox="0 0 220 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                                    <text x="15" y="42" font-family="'Georgia', serif" font-weight="bold" font-size="34" fill="#38bdf8" font-style="italic">TANTO</text>
-                                </svg>
-                            </div>
-                            <div class="logo-item-box" title="PDAM Telemetry">
-                                <svg viewBox="0 0 220 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                                    <text x="15" y="42" font-family="'Arial Black', sans-serif" font-weight="900" font-size="34" fill="#0ea5e9">PDAM</text>
-                                    <path d="M150 35 Q160 20 170 35 T190 35" fill="none" stroke="#22c55e" stroke-width="4"/>
-                                </svg>
-                            </div>
-                            <div class="logo-item-box" title="Samsung Electronics"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/samsung.svg" alt="Samsung"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="column-box">
-                        <h3>Telecoms & Wireless Backhaul</h3>
-                        <div class="logo-vertical-stack">
-                            <div class="logo-item-box" title="ZTE Corporation">
-                                <svg viewBox="0 0 200 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                                    <text x="20" y="44" font-family="'Arial', sans-serif" font-weight="900" font-size="46" fill="#38bdf8">ZTE</text>
-                                </svg>
-                            </div>
-                            <div class="logo-item-box" title="Ceragon Networks">
-                                <svg viewBox="0 0 240 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                                    <text x="15" y="42" font-family="'Century Gothic', sans-serif" font-weight="bold" font-size="32" fill="#f8fafc" letter-spacing="0.5">CERAGON</text>
-                                </svg>
-                            </div>
-                            <div class="logo-item-box" title="Cambium Networks">
-                                <svg viewBox="0 0 250 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                                    <text x="10" y="42" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="24" fill="#38bdf8">Cambium</text>
-                                    <text x="125" y="42" font-family="'Segoe UI', sans-serif" font-weight="normal" font-size="20" fill="#94a3b8">Net</text>
-                                </svg>
-                            </div>
-                            <div class="logo-item-box" title="Airspan Networks">
-                                <svg viewBox="0 0 240 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                                    <text x="15" y="42" font-family="'Arial', sans-serif" font-weight="bold" font-size="34" fill="#f8fafc" letter-spacing="-0.5">Airspan</text>
-                                    <circle cx="175" cy="25" r="6" fill="#eab308"/>
-                                </svg>
+                                <div class="logo-item-box" title="LoRaWAN Network">
+                                    <svg viewBox="0 0 240 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                                        <text x="10" y="42" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="28" fill="#38bdf8">LoRa</text>
+                                        <text x="85" y="42" font-family="'Segoe UI', sans-serif" font-weight="300" font-size="28" fill="#94a3b8">WAN</text>
+                                        <path d="M190 20 Q205 10 220 20 Q235 30 210 45" fill="none" stroke="#38bdf8" stroke-width="4"/>
+                                    </svg>
+                                </div>
+                                <div class="logo-item-box" title="Tanto Inti Line">
+                                    <svg viewBox="0 0 220 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                                        <text x="15" y="42" font-family="'Georgia', serif" font-weight="bold" font-size="34" fill="#38bdf8" font-style="italic">TANTO</text>
+                                    </svg>
+                                </div>
+                                <div class="logo-item-box" title="PDAM Telemetry">
+                                    <svg viewBox="0 0 220 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                                        <text x="15" y="42" font-family="'Arial Black', sans-serif" font-weight="900" font-size="34" fill="#0ea5e9">PDAM</text>
+                                        <path d="M150 35 Q160 20 170 35 T190 35" fill="none" stroke="#22c55e" stroke-width="4"/>
+                                    </svg>
+                                </div>
+                                <div class="logo-item-box" title="Samsung Electronics"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/samsung.svg" alt="Samsung"></div>
                             </div>
                         </div>
+                        
+                        <div class="column-box">
+                            <h3>Telecoms & Wireless Backhaul</h3>
+                            <div class="logo-vertical-stack">
+                                <div class="logo-item-box" title="ZTE Corporation">
+                                    <svg viewBox="0 0 200 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                                        <text x="20" y="44" font-family="'Arial', sans-serif" font-weight="900" font-size="46" fill="#38bdf8">ZTE</text>
+                                    </svg>
+                                </div>
+                                <div class="logo-item-box" title="Ceragon Networks">
+                                    <svg viewBox="0 0 240 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                                        <text x="15" y="42" font-family="'Century Gothic', sans-serif" font-weight="bold" font-size="32" fill="#f8fafc" letter-spacing="0.5">CERAGON</text>
+                                    </svg>
+                                </div>
+                                <div class="logo-item-box" title="Cambium Networks">
+                                    <svg viewBox="0 0 250 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                                        <text x="10" y="42" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="24" fill="#38bdf8">Cambium</text>
+                                        <text x="125" y="42" font-family="'Segoe UI', sans-serif" font-weight="normal" font-size="20" fill="#94a3b8">Net</text>
+                                    </svg>
+                                </div>
+                                <div class="logo-item-box" title="Airspan Networks">
+                                    <svg viewBox="0 0 240 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                                        <text x="15" y="42" font-family="'Arial', sans-serif" font-weight="bold" font-size="34" fill="#f8fafc" letter-spacing="-0.5">Airspan</text>
+                                        <circle cx="175" cy="25" r="6" fill="#eab308"/>
+                                    </svg>
+                                </div>
+                                <div class="logo-item-box" title="Ubiquiti Networks">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/ubiquiti.svg" alt="Ubiquiti">
+                                </div>
+                                <div class="logo-item-box" title="Nokia Corporation">
+                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/nokia.svg" alt="Nokia" style="max-height: 80% !important; width: 85% !important; object-fit: contain;">
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
-                    
                 </div>
             </div>
         </main>
